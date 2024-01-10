@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 Bienvenido a Neoland! Por fin ha llegado el momento de ponernos a trabajar. Hoy hemos avanzado mucho con los conceptos de JS y es el momento de ponerlos en práctica.
 
 Antes de comenzar crea un nuevo proyecto en vuestro GitLab o Github, el nombre que debéis utilizar es **neoland-basic-algorithms** y recuerda realizar un commit por iteración:
@@ -129,5 +127,14 @@ if (/* COMPLETAR */) {
 }
 ```
 
-**Iteración #6: Bucles**
->>>>>>> a04706e (Cambio enunciados)
+Iteración #6: Bucles
+
+1.1 Crea un bucle for que vaya desde 0 a 9 y muestralo por consola.
+
+1.2 Crea un bucle for que vaya desde 0 a 9 y muestralo por consola solo 
+cuando el resto del numero dividido entre 2 sea 0.
+
+1.3 Crea un bucle para conseguir dormir contando ovejas. 
+Este bucle tiene que dar 10 vueltas, es decir, 10 console.log.
+Muestra por consola un mensaje diciendo 'Intentando dormir 🐑' en cada vuelta del bucle 
+y cambia el mensaje en la décima vuelta a 'Dormido!'.
