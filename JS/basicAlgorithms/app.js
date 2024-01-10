@@ -1,6 +1,7 @@
 //!Guía de práctica//
 
 //?Iteración #1: Variables//
+console.log("Iteración #1: Variables")
 //*1.1 Crea una variable llamada myFavoriteHero, asigna el valor Hulk a ella.
 
 let myFavoriteHero; //declaro variable usando let
@@ -22,6 +23,7 @@ z = h + y;
 console.log("La suma de las variables anteriores es igual a ",z);
 
 //?Iteración #2: Variables avanzadas//
+console.log("Iteración #2: Variables avanzadas")
 //*1.1 Dado el siguiente javascript, cambia el valor de la propiedad age a 25.
 const character = {name: 'Jack Sparrow', age: 25};
 
@@ -37,18 +39,31 @@ console.log("Hola soy",firstName,lastName,",tengo",age,"años y me gustan los lo
 //*ambos juguetes.
 const toy1 = {name: 'Buss myYear', price: 19};
 const toy2 = {name: 'Rallo mcKing', price: 29};
-const finalPrice = (toy1,toy2) => toy1+toy2;
-console.log("El precio total de ambos productos es de",finalPrice)
+let finalPricetoy = toy1.price + toy2.price
+console.log("El precio total de ambos productos es de",finalPricetoy)
 
 //*1.4 Dado el siguiente javascript, actualiza el valor de la variable globalBasePrice a 25000 
 //*y actualiza la propiedad finalPrice de todos los coches con el valor de su propiedad 
 //*basePrice más el valor de la variable globalBasePrice.
-//*let globalBasePrice = 10000;
-//*const car1 = {name: 'BMW m&m', basePrice: 50000, finalPrice: 60000};
-//*const car2 = {name: 'Chevrolet Corbina', basePrice: 70000, finalPrice: 80000};
 
+const car1 = {name: 'BMW m&m', basePrice: 50000, globalBasePrice : 25000};
+const car2 = {name: 'Chevrolet Corbina', basePrice: 70000, globalBasePrice : 25000};
+let finalPricebmw = car1.basePrice + car1.globalBasePrice
+let finalPricechevrolet = car2.basePrice + car2.globalBasePrice
+
+console.log("El precio final del BMW será de",finalPricebmw,"€ y el del Chevrolet",finalPricechevrolet,"€");
 //?Iteración #3: Operadores//
+//*1.1 Multiplica 10 por 5 y muestra el resultado mediante console.
+console.log(10*5)
+//*1.2 Divide 10 por 2 y muestra el resultado en un console.
 
+//*1.3 Muestra mediante un console el resto de dividir 15 por 9.
+
+//*1.4 Usa el correcto operador de asignación que resultará en o = 15, 
+//*teniendo dos variables p = 10 y j = 5.
+
+//*1.5 Usa el correcto operador de asignación que resultará en i = 50,
+//*teniendo dos variables c = 10 y m = 5.
 //?Iteración #4: Arrays//
 
 //?Iteración #5: Condicionales//
