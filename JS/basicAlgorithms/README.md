@@ -1,3 +1,4 @@
+JS Basic Algorithms
 
 Bienvenido a Neoland! Por fin ha llegado el momento de ponernos a trabajar. Hoy hemos avanzado mucho con los conceptos de JS y es el momento de ponerlos en práctica.
 
@@ -127,8 +128,8 @@ if (/* COMPLETAR */) {
 }
 ```
 
-Iteración #6: Bucles
-
+**Iteración #6: Bucles**
+```jsx
 1.1 Crea un bucle for que vaya desde 0 a 9 y muestralo por consola.
 
 1.2 Crea un bucle for que vaya desde 0 a 9 y muestralo por consola solo 
