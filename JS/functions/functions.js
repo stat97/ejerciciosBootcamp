@@ -5,8 +5,8 @@
 numberOne = Math.random(); //Con este metodo se obtiene un valor aleatorio
 numberTwo = Math.random();
 function sum(numberOne, numberTwo) {
-  const numeroMaximo = Math.max(numberOne,numberTwo)
-  return numeroMaximo
+  const numeroMaximo = Math.max(numberOne, numberTwo);
+  return numeroMaximo;
 }
 let numeroMaximo1 = sum(numberOne, numberTwo); //Llamo a la funcion y almaceno su valor declarando la variable con el resultado
 console.log(
@@ -15,7 +15,8 @@ console.log(
   "y el segundo numero aleatorio es",
   numberTwo,
   "el maximo de los dos será",
-  numeroMaximo1)
+  numeroMaximo1
+);
 //?Iteración #2: Buscar la palabra más larga**
 
 //*Completa la función que tomando un array de strings como argumento devuelva el más largo, en caso de que dos strings tenga la misma longitud deberá devolver el primero.
@@ -85,17 +86,17 @@ console.log("La media aritmética del array es de", numeroMedio);
 
 //*Crea una función que reciba por parámetro un array y cuando es un valor number lo sume y de lo contrario cuente la longitud del string y lo sume. Puedes usar este array para probar tu función:
 
-const mixedElements = [6, 1, 'Rayo', 1, 'vallecano', '10', 'upgrade', 8, 'hub'];
+const mixedElements = [6, 1, "Rayo", 1, "vallecano", "10", "upgrade", 8, "hub"];
 
 function averageWord(mixedElements) {
   var numeroSumado2 = 0; //inicializo valores
   var mixedElementsSumado = 0; //inicializo valores
 
   for (let i = 0; i < mixedElements.length; i++) {
-    if (typeof mixedElements[i] === 'string') //uso condicion con metodo typeof para ver si es string o numero
-    {
+    if (typeof mixedElements[i] === "string") {
+      //uso condicion con metodo typeof para ver si es string o numero
       mixedElementsSumado += mixedElements[i].length; // Suma la longitud del string
-    } else if (typeof mixedElements[i] === 'number') {
+    } else if (typeof mixedElements[i] === "number") {
       numeroSumado2 += mixedElements[i]; // Empleando operador += para simplificar, es lo mismo que numeroSumado2 += mixedElements[i] +
     }
   }
@@ -104,4 +105,39 @@ function averageWord(mixedElements) {
 }
 
 let numeroSumadoTotal2 = averageWord(mixedElements);
-console.log("La suma total del array tanto de numeros como de longitud de palabras es de",numeroSumadoTotal2);
+console.log(
+  "La suma total del array tanto de numeros como de longitud de palabras es de",
+  numeroSumadoTotal2
+);
+//*Iteración #6: Valores únicos**
+
+//*Crea una función que reciba por parámetro un array y compruebe si existen elementos duplicados, en caso que existan los elimina para retornar un array sin los elementos duplicados. Puedes usar este array para probar tu función:
+const duplicates = [
+  "sushi",
+  "pizza",
+  "burger",
+  "potatoe",
+  "pasta",
+  "ice-cream",
+  "pizza",
+  "chicken",
+  "onion rings",
+  "pasta",
+  "soda",
+];
+
+function removeDuplicates(duplicates) {
+  const arrayLimpio = []; //declaro un array vacio inicialmente para luego ir añadiendo
+
+  for (let i = 0; i < duplicates.length; i++) {
+    if (!arrayLimpio.includes(duplicates[i])) {
+      //metodo includes para saber si el arraylimpio contiene el elemento iterado del array inicial
+      arrayLimpio.push(duplicates[i]); // si no contiene el elemento del array lo añade con el metodo push
+    }
+  }
+
+  return arrayLimpio;
+}
+
+const ArrayFinal = removeDuplicates(duplicates);
+console.log(ArrayFinal);
