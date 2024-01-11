@@ -8,7 +8,7 @@ function sum(numberOne, numberTwo) {
   const numeroMaximo = Math.max(numberOne,numberTwo)
   return numeroMaximo
 }
-let numeroMaximo1 = sum(numberOne, numberTwo); //Llamo a la funcion
+let numeroMaximo1 = sum(numberOne, numberTwo); //Llamo a la funcion y almaceno su valor declarando la variable con el resultado
 console.log(
   "El primer numero aleatorio es",
   numberOne,
