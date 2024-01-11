@@ -2,7 +2,7 @@
 
 //*Completa la función que tomando dos números como argumento devuelva el más alto.
 //Asigno valores a las variables antes de la funcion
-numberOne = Math.random(); //un valor aleatorio
+numberOne = Math.random(); //Con este metodo se obtiene un valor aleatorio
 numberTwo = Math.random();
 function sum(numberOne, numberTwo) {
   console.log(
@@ -79,3 +79,28 @@ function average(numbers1) {
 }
 let numeroMedio = average(numbers1); //lo que me devuelve la funcion lo guardo en una variable
 console.log("La media aritmética del array es de", numeroMedio);
+
+//**Iteración #5: Calcular promedio de strings**
+
+//*Crea una función que reciba por parámetro un array y cuando es un valor number lo sume y de lo contrario cuente la longitud del string y lo sume. Puedes usar este array para probar tu función:
+
+const mixedElements = [6, 1, 'Rayo', 1, 'vallecano', '10', 'upgrade', 8, 'hub'];
+
+function averageWord(mixedElements) {
+  var numeroSumado2 = 0; //inicializo valores
+  var mixedElementsSumado = 0; //inicializo valores
+
+  for (let i = 0; i < mixedElements.length; i++) {
+    if (typeof mixedElements[i] === 'string') //uso condicion con metodo typeof para ver si es string o numero
+    {
+      mixedElementsSumado += mixedElements[i].length; // Suma la longitud del string
+    } else if (typeof mixedElements[i] === 'number') {
+      numeroSumado2 += mixedElements[i]; // Empleando operador += para simplificar, es lo mismo que numeroSumado2 += mixedElements[i] + numeroSumado2
+    }
+  }
+
+  return numeroSumado2 + mixedElementsSumado;
+}
+
+let numeroSumadoTotal2 = averageWord(mixedElements);
+console.log("La suma total del array tanto de numeros como de longitud de palabras es de",numeroSumadoTotal2);
