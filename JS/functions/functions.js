@@ -1,5 +1,5 @@
 //?Iteración #1: Buscar el máximo**
-
+console.log("🚀Iteration#1 : Buscar el máximo")
 //*Completa la función que tomando dos números como argumento devuelva el más alto.
 //Asigno valores a las variables antes de la funcion
 numberOne = Math.random(); //Con este metodo se obtiene un valor aleatorio
@@ -18,6 +18,7 @@ console.log(
   numeroMaximo1
 );
 //?Iteración #2: Buscar la palabra más larga**
+console.log("🚀Iteration#2: Buscar la palabra más larga")
 
 //*Completa la función que tomando un array de strings como argumento devuelva el más largo, en caso de que dos strings tenga la misma longitud deberá devolver el primero.
 
@@ -49,7 +50,8 @@ function findLongestWord(avengers) {
 let palabraMasLarga = findLongestWord(avengers); //llamo a la funcion , importante y declaro la variable palabramaslarga
 console.log("La palabra mas larga del array es", palabraMasLarga);
 
-//**Iteración #3: Calcular la suma**
+//**?Iteración #3: Calcular la suma**
+console.log("🚀Iteration #3: Calcular la suma")
 //*Calcular una suma puede ser tan simple como iterar sobre un array y sumar cada uno de los elementos.
 //*Implemente la función denominada sumNumbers que toma un array de números como argumento y devuelve la suma de todos los números de la matriz.
 //*Puedes usar este array para probar tu función:
@@ -66,7 +68,8 @@ function sumAll(numbers) {
 let numeroSumadoTotal = sumAll(numbers);
 console.log("La suma total del array será de", numeroSumadoTotal);
 
-//**Iteración #4: Calcular el promedio**
+//**?Iteración #4: Calcular el promedio**
+console.log("🚀Iteration #4: Calcular el promedio")
 
 //*Calcular un promedio es una tarea extremadamente común. Puedes usar este array para probar tu función:
 
@@ -82,7 +85,8 @@ function average(numbers1) {
 let numeroMedio = average(numbers1); //lo que me devuelve la funcion lo guardo en una variable
 console.log("La media aritmética del array es de", numeroMedio);
 
-//**Iteración #5: Calcular promedio de strings**
+//**?Iteración #5: Calcular promedio de strings**
+console.log("🚀Iteration #5: Calcular promedio de strings")
 
 //*Crea una función que reciba por parámetro un array y cuando es un valor number lo sume y de lo contrario cuente la longitud del string y lo sume. Puedes usar este array para probar tu función:
 
@@ -109,7 +113,8 @@ console.log(
   "La suma total del array tanto de numeros como de longitud de palabras es de",
   numeroSumadoTotal2
 );
-//*Iteración #6: Valores únicos**
+//*?Iteración #6: Valores únicos**
+console.log("🚀Iteration #6: Valores únicos")
 
 //*Crea una función que reciba por parámetro un array y compruebe si existen elementos duplicados, en caso que existan los elimina para retornar un array sin los elementos duplicados. Puedes usar este array para probar tu función:
 const duplicates = [
