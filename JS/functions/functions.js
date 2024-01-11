@@ -41,9 +41,8 @@ function findLongestWord(avengers) {
       palabraMasLarga = palabraActual; // con esta expresion se actualiza la variable
     }
   }
-  return palabraMasLarga //el return siempre dentro de la funcion
-  //console.log("La palabra mas larga del array es",palabraMasLarga);
+  return palabraMasLarga; //el return siempre dentro de la funcion
 }
 
 let palabraMasLarga = findLongestWord(avengers); //llamo a la funcion , importante y declaro la variable palabramaslarga
-console.log(palabraMasLarga)
+console.log("La palabra mas larga del array es", palabraMasLarga);
