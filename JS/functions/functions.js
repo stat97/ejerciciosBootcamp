@@ -46,3 +46,20 @@ function findLongestWord(avengers) {
 
 let palabraMasLarga = findLongestWord(avengers); //llamo a la funcion , importante y declaro la variable palabramaslarga
 console.log("La palabra mas larga del array es", palabraMasLarga);
+
+//**Iteración #3: Calcular la suma**
+//*Calcular una suma puede ser tan simple como iterar sobre un array y sumar cada uno de los elementos.
+//*Implemente la función denominada sumNumbers que toma un array de números como argumento y devuelve la suma de todos los números de la matriz.
+//*Puedes usar este array para probar tu función:
+
+const numbers = [1, 2, 3, 5, 45, 37, 58];
+var numeroSumado = 0; //declaro inicilamente como 0 el numerosumado utilizando var ya que cambiará
+function sumAll(numbers) {
+  for (i = 0; i < numbers.length; i++) {
+    const numeroActual = numbers[i]; //recorriendo array con buble
+    numeroSumado = numeroActual + numeroSumado; //actualizando variable
+  }
+  return numeroSumado;
+}
+let numeroSumadoTotal = sumAll(numbers);
+console.log("La suma total del array será de",numeroSumadoTotal);
