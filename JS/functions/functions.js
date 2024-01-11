@@ -56,7 +56,7 @@ const numbers = [1, 2, 3, 5, 45, 37, 58];
 var numeroSumado = 0; //declaro inicilamente como 0 el numerosumado utilizando var ya que cambiará
 function sumAll(numbers) {
   for (i = 0; i < numbers.length; i++) {
-    const numeroActual = numbers[i]; //recorriendo array con buble
+    const numeroActual = numbers[i]; //recorriendo array con bucle
     numeroSumado = numeroActual + numeroSumado; //actualizando variable
   }
   return numeroSumado;
@@ -72,10 +72,10 @@ const numbers1 = [12, 21, 38, 5, 45, 37, 6];
 var numeroSumado1 = 0;
 function average(numbers1) {
   for (i = 0; i < numbers.length; i++) {
-    const numeroActual1 = numbers[i]; //recorriendo array con buble
+    const numeroActual1 = numbers[i]; //recorriendo array con bucle
     numeroSumado1 = numeroActual1 + numeroSumado1; //actualizando variable
   }
   return numeroSumado1 / numbers.length; //igual al ejercicio anterior pero dividiendo entre la longitud del array
 }
-let numeroSumadoTotal1 = average(numbers1); //lo que me devuelve la funcion lo guardo en una variable
-console.log("La suma total del array será de", numeroSumadoTotal1);
+let numeroMedio = average(numbers1); //lo que me devuelve la funcion lo guardo en una variable
+console.log("La media aritmética del array es de", numeroMedio);
