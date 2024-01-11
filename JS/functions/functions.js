@@ -5,16 +5,17 @@
 numberOne = Math.random(); //Con este metodo se obtiene un valor aleatorio
 numberTwo = Math.random();
 function sum(numberOne, numberTwo) {
-  console.log(
-    "El primer numero aleatorio es",
-    numberOne,
-    "y el segundo numero aleatorio es",
-    numberTwo,
-    "el maximo de los dos será",
-    Math.max(numberOne, numberTwo)
-  );
+  const numeroMaximo = Math.max(numberOne,numberTwo)
+  return numeroMaximo
 }
-sum(numberOne, numberTwo); //Llamo a la funcion
+let numeroMaximo1 = sum(numberOne, numberTwo); //Llamo a la funcion
+console.log(
+  "El primer numero aleatorio es",
+  numberOne,
+  "y el segundo numero aleatorio es",
+  numberTwo,
+  "el maximo de los dos será",
+  numeroMaximo1)
 //?Iteración #2: Buscar la palabra más larga**
 
 //*Completa la función que tomando un array de strings como argumento devuelva el más largo, en caso de que dos strings tenga la misma longitud deberá devolver el primero.
@@ -95,7 +96,7 @@ function averageWord(mixedElements) {
     {
       mixedElementsSumado += mixedElements[i].length; // Suma la longitud del string
     } else if (typeof mixedElements[i] === 'number') {
-      numeroSumado2 += mixedElements[i]; // Empleando operador += para simplificar, es lo mismo que numeroSumado2 += mixedElements[i] + numeroSumado2
+      numeroSumado2 += mixedElements[i]; // Empleando operador += para simplificar, es lo mismo que numeroSumado2 += mixedElements[i] +
     }
   }
 
