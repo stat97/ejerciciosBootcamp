@@ -62,4 +62,20 @@ function sumAll(numbers) {
   return numeroSumado;
 }
 let numeroSumadoTotal = sumAll(numbers);
-console.log("La suma total del array será de",numeroSumadoTotal);
+console.log("La suma total del array será de", numeroSumadoTotal);
+
+//**Iteración #4: Calcular el promedio**
+
+//*Calcular un promedio es una tarea extremadamente común. Puedes usar este array para probar tu función:
+
+const numbers1 = [12, 21, 38, 5, 45, 37, 6];
+var numeroSumado1 = 0;
+function average(numbers1) {
+  for (i = 0; i < numbers.length; i++) {
+    const numeroActual1 = numbers[i]; //recorriendo array con buble
+    numeroSumado1 = numeroActual1 + numeroSumado1; //actualizando variable
+  }
+  return numeroSumado1 / numbers.length; //igual al ejercicio anterior pero dividiendo entre la longitud del array
+}
+let numeroSumadoTotal1 = average(numbers1); //lo que me devuelve la funcion lo guardo en una variable
+console.log("La suma total del array será de", numeroSumadoTotal1);
