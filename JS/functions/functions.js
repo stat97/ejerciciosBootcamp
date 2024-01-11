@@ -37,8 +37,8 @@ function findLongestWord(avengers) {
     const palabraActual = avengers[i]; //declaro variable y la guardo en la posicion 0,1..etc
 
     if (palabraActual.length > palabraMasLarga.length) {
-      // condicional para comparar todo el array y obtener la palabra mas larga
-      palabraMasLarga = palabraActual;
+      // condicional para comparar todo el array recorriendolo con el bucle y obtener la palabra mas larga
+      palabraMasLarga = palabraActual; // con esta expresion se actualiza la variable
     }
   }
   console.log(palabraMasLarga);
