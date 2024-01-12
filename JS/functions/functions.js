@@ -136,7 +136,7 @@ function removeDuplicates(duplicates) {
 
   for (let i = 0; i < duplicates.length; i++) {
     if (!arrayLimpio.includes(duplicates[i])) {
-      //metodo includes para saber si el arraylimpio contiene el elemento iterado del array inicial
+      //metodo includes para saber si el arraylimpio contiene el valor especifico del array inicial
       arrayLimpio.push(duplicates[i]); // si no contiene el elemento del array lo añade con el metodo push
     }
   }
@@ -146,11 +146,36 @@ function removeDuplicates(duplicates) {
 
 const ArrayFinal = removeDuplicates(duplicates);
 console.log(ArrayFinal);
+//**Iteración #7: Buscador de nombres**
+console.log("🚀Iteration#7:Buscador de nombres")
+
+//*Crea una función que reciba por parámetro un array y el valor que desea comprobar que existe dentro de dicho array - comprueba si existe el elemento, en caso que existan nos devuelve un true y la posición de dicho elemento y por la contra un false. Puedes usar este array para probar tu función:
+
+const nameFinder = [
+  "Peter",
+  "Steve",
+  "Tony",
+  "Natasha",
+  "Clint",
+  "Logan",
+  "Xabier",
+  "Bruce",
+  "Peggy",
+  "Jessica",
+  "Marc",
+];
+function finderName(nameFinder) {
+  const finder = nameFinder.find((el) => el === "Bruce"); //metodo find ... y empleo la nomenlcatura el => el === ...para encontrar en el array
+  return finder;
+}
+let comprobacion = finderName(nameFinder);
+console.log(comprobacion);
+
 
 //Importante diferencia , en la iteracion 6  includes y en la 8 hasownproperty, metodos distintos para cada caso particular.
 
 //*Iteration #8: Contador de repeticiones
-console.log("🚀Iteration#8: Contador de repeticiones")
+console.log("🚀Iteration#8: Contador de repeticiones");
 //*Crea una función que nos devuelva el número de veces que se repite cada una de las palabras que lo conforma.  Puedes usar este array para probar tu función:
 const counterWords = [
   "code",
@@ -185,3 +210,4 @@ function repeatCounter(counterWords) {
 
 const contadorFinal = repeatCounter(counterWords);
 console.log(contadorFinal);
+
