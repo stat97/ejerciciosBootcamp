@@ -148,38 +148,40 @@ const ArrayFinal = removeDuplicates(duplicates);
 console.log(ArrayFinal);
 
 //Importante diferencia , en la iteracion 6  includes y en la 8 hasownproperty, metodos distintos para cada caso particular.
+
 //*Iteration #8: Contador de repeticiones
+console.log("🚀Iteration#8: Contador de repeticiones")
 //*Crea una función que nos devuelva el número de veces que se repite cada una de las palabras que lo conforma.  Puedes usar este array para probar tu función:
 const counterWords = [
-  'code',
-  'repeat',
-  'eat',
-  'sleep',
-  'code',
-  'enjoy',
-  'sleep',
-  'code',
-  'enjoy',
-  'upgrade',
-  'code'
+  "code",
+  "repeat",
+  "eat",
+  "sleep",
+  "code",
+  "enjoy",
+  "sleep",
+  "code",
+  "enjoy",
+  "upgrade",
+  "code",
 ];
 
 function repeatCounter(counterWords) {
-var contador =[]; //creo un array vacio para el contador
+  var contador = []; //creo un array vacio para el contador
   for (let i = 0; i < counterWords.length; i++) {
     const word = counterWords[i]; // la nueva constante word es igual a cada una de las iteraciones del bucle
 
-    // Comprobar si la palabra ya está en el objeto wordCount
-    if (contador.hasOwnProperty(word)) //empleo el metodo hasownproperty , si el contador que es un array vacio contiene esa palabra
-    {
-      contador[word] ++; // incrementar el contador de esa palabra
+    // Comprobar si la palabra ya está en el array counterWords
+    if (contador.hasOwnProperty(word)) {
+      //empleo el metodo hasownproperty , si el contador que es un array vacio contiene esa palabra
+      contador[word]++; // incrementar el contador de esa palabra
     } else {
       contador[word] = 1; // Inicializar el contador a 1 si es la primera vez que se encuentra la palabra
     }
   }
 
   return contador;
-};
+}
 
 const contadorFinal = repeatCounter(counterWords);
 console.log(contadorFinal);
