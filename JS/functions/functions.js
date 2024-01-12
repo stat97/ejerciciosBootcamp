@@ -165,7 +165,7 @@ const nameFinder = [
   "Marc",
 ];
 function finderName(nameFinder) {
-  const finder = nameFinder.find((el) => el === "Bruce"); //metodo find ... y empleo la nomenlcatura el => el === ...para encontrar en el array
+  const finder = nameFinder.find(el => el === "Bruce"); //metodo find ... y empleo la nomenlcatura el => el === ...para encontrar en el array
   return finder;
 }
 let comprobacion = finderName(nameFinder);
