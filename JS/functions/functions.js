@@ -1,5 +1,5 @@
 //?Iteración #1: Buscar el máximo**
-console.log("🚀Iteration#1 : Buscar el máximo")
+console.log("🚀Iteration#1 : Buscar el máximo");
 //*Completa la función que tomando dos números como argumento devuelva el más alto.
 //Asigno valores a las variables antes de la funcion
 numberOne = Math.random(); //Con este metodo se obtiene un valor aleatorio
@@ -18,7 +18,7 @@ console.log(
   numeroMaximo1
 );
 //?Iteración #2: Buscar la palabra más larga**
-console.log("🚀Iteration#2: Buscar la palabra más larga")
+console.log("🚀Iteration#2: Buscar la palabra más larga");
 
 //*Completa la función que tomando un array de strings como argumento devuelva el más largo, en caso de que dos strings tenga la misma longitud deberá devolver el primero.
 
@@ -51,7 +51,7 @@ let palabraMasLarga = findLongestWord(avengers); //llamo a la funcion , importan
 console.log("La palabra mas larga del array es", palabraMasLarga);
 
 //**?Iteración #3: Calcular la suma**
-console.log("🚀Iteration #3: Calcular la suma")
+console.log("🚀Iteration #3: Calcular la suma");
 //*Calcular una suma puede ser tan simple como iterar sobre un array y sumar cada uno de los elementos.
 //*Implemente la función denominada sumNumbers que toma un array de números como argumento y devuelve la suma de todos los números de la matriz.
 //*Puedes usar este array para probar tu función:
@@ -69,7 +69,7 @@ let numeroSumadoTotal = sumAll(numbers);
 console.log("La suma total del array será de", numeroSumadoTotal);
 
 //**?Iteración #4: Calcular el promedio**
-console.log("🚀Iteration #4: Calcular el promedio")
+console.log("🚀Iteration #4: Calcular el promedio");
 
 //*Calcular un promedio es una tarea extremadamente común. Puedes usar este array para probar tu función:
 
@@ -86,7 +86,7 @@ let numeroMedio = average(numbers1); //lo que me devuelve la funcion lo guardo e
 console.log("La media aritmética del array es de", numeroMedio);
 
 //**?Iteración #5: Calcular promedio de strings**
-console.log("🚀Iteration #5: Calcular promedio de strings")
+console.log("🚀Iteration #5: Calcular promedio de strings");
 
 //*Crea una función que reciba por parámetro un array y cuando es un valor number lo sume y de lo contrario cuente la longitud del string y lo sume. Puedes usar este array para probar tu función:
 
@@ -114,7 +114,7 @@ console.log(
   numeroSumadoTotal2
 );
 //*?Iteración #6: Valores únicos**
-console.log("🚀Iteration #6: Valores únicos")
+console.log("🚀Iteration #6: Valores únicos");
 
 //*Crea una función que reciba por parámetro un array y compruebe si existen elementos duplicados, en caso que existan los elimina para retornar un array sin los elementos duplicados. Puedes usar este array para probar tu función:
 const duplicates = [
@@ -146,3 +146,40 @@ function removeDuplicates(duplicates) {
 
 const ArrayFinal = removeDuplicates(duplicates);
 console.log(ArrayFinal);
+
+//Importante diferencia , en la iteracion 6  includes y en la 8 hasownproperty, metodos distintos para cada caso particular.
+//*Iteration #8: Contador de repeticiones
+//*Crea una función que nos devuelva el número de veces que se repite cada una de las palabras que lo conforma.  Puedes usar este array para probar tu función:
+const counterWords = [
+  'code',
+  'repeat',
+  'eat',
+  'sleep',
+  'code',
+  'enjoy',
+  'sleep',
+  'code',
+  'enjoy',
+  'upgrade',
+  'code'
+];
+
+function repeatCounter(counterWords) {
+var contador =[]; //creo un array vacio para el contador
+  for (let i = 0; i < counterWords.length; i++) {
+    const word = counterWords[i]; // la nueva constante word es igual a cada una de las iteraciones del bucle
+
+    // Comprobar si la palabra ya está en el objeto wordCount
+    if (contador.hasOwnProperty(word)) //empleo el metodo hasownproperty , si el contador que es un array vacio contiene esa palabra
+    {
+      contador[word] ++; // incrementar el contador de esa palabra
+    } else {
+      contador[word] = 1; // Inicializar el contador a 1 si es la primera vez que se encuentra la palabra
+    }
+  }
+
+  return contador;
+};
+
+const contadorFinal = repeatCounter(counterWords);
+console.log(contadorFinal);
