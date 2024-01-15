@@ -75,7 +75,6 @@ for (const key in alien) {
 
 //*Usa un bucle **for** para recorrer todos los destinos del array y elimina los elementos que tengan el id 11 y 40. Imprime en un ***console log*** el array. Puedes usar este array:
 
-
 const placesToGo = [{id: 5, name: 'Japan'}, {id: 11, name: 'Venecia'}, {id: 23, name: 'Murcia'}, {id: 40, name: 'Santander'}, {id: 44, name: 'Filipinas'}, {id: 59, name: 'Madagascar'}]
 const placesToGoFreeArray = [];
 for(i=0 ; i<placesToGo.length ;i++){
@@ -87,3 +86,21 @@ for(i=0 ; i<placesToGo.length ;i++){
   }
 }
 console.log(placesToGoFreeArray)
+//**Iteración #6: Mixed For...of e includes**
+
+//*Usa un bucle **for...of** para recorrer todos los juguetes y elimina los que incluyan la palabra gato. Recuerda que puedes usar la función ***.includes()*** para comprobarlo.Puedes usar este array:
+const toys = [
+{id: 5, name: 'Buzz MyYear'}, 
+{id: 11, name: 'Action Woman'}, 
+{id: 23, name: 'Barbie Man'}, 
+{id: 40, name: 'El gato con Guantes'},
+{id: 40, name: 'El gato felix'}
+]
+const freeToys=[];
+for (const iterator of toys) {
+  if(!iterator.name.includes('gato')){
+    freeToys.push(iterator);
+  }
+  
+}
+console.log(freeToys)
