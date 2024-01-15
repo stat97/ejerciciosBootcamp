@@ -22,3 +22,27 @@ return nuevoArray
 }
 let arrayFinal = incluir (products) //Llamo a la funcion
 console.log(arrayFinal)
+//*Iteración #2: Condicionales avanzados
+//*Comprueba en cada uno de los usuarios que tenga al menos dos trimestres aprobados y añade la propiedad isApproved a true o false en consecuencia. Una vez lo tengas compruébalo con un console.log. 
+//*( Mirar abajo en pistas ).
+//*Puedes usar este array para probar tu función:
+const alumns = [
+    {name: 'Pepe Viruela', T1: false, T2: false, T3: true}, 
+		{name: 'Lucia Aranda', T1: true, T2: false, T3: true},
+		{name: 'Juan Miranda', T1: false, T2: true, T3: true},
+		{name: 'Alfredo Blanco', T1: false, T2: false, T3: false},
+		{name: 'Raquel Benito', T1: true, T2: true, T3: true}
+];
+let aprobado = [];
+const comprobarTrimestres = (alumns) => {
+alumns.forEach((alumns) => {
+  if(alumns.T1 == true && alumns.T2 == true && alumns.T3 ==true || alumns.T1 == true && alumns.T2 == true && alumns.T3 ==false || alumns.T1 == true && alumns.T2 == false && alumns.T3 ==true || alumns.T1 == false && alumns.T2 == true && alumns.T3 ==true){
+    
+    aprobado.push(alumns.name) ; //meto la informacion del alumno en el array vacio si tiene al menos dos trimestres aprobados
+  }})
+return aprobado 
+  }
+
+let aprobadoFinal = comprobarTrimestres(alumns)
+console.log (`Los alumnos con almenos dos trimestres aprobados son ${aprobadoFinal}`)
+
