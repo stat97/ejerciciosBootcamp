@@ -50,7 +50,7 @@ console.log("🚀Iteration #3: Calcular la suma");
 
 const numbers = [1, 2, 3, 5, 45, 37, 58];
 var numeroSumado = 0; //declaro inicilamente como 0 el numerosumado utilizando var ya que cambiará
-function sumAll(numbers) {
+const sumAll = (numbers) =>{
   for (i = 0; i < numbers.length; i++) {
     const numeroActual = numbers[i]; //recorriendo array con bucle
     numeroSumado = numeroActual + numeroSumado; //actualizando variable
