@@ -67,7 +67,7 @@ console.log("🚀Iteration #4: Calcular el promedio");
 
 const numbers1 = [12, 21, 38, 5, 45, 37, 6];
 var numeroSumado1 = 0;
-function average(numbers1) {
+const average = (numbers1) => {
   for (i = 0; i < numbers.length; i++) {
     const numeroActual1 = numbers[i]; //recorriendo array con bucle
     numeroSumado1 = numeroActual1 + numeroSumado1; //actualizando variable
