@@ -25,7 +25,7 @@ const avengers = [
   "Captain M.",
 ];
 
-function findLongestWord(avengers) {
+const findLongestWord = (avengers) => {
   let palabraMasLarga = ""; // Declaro una variable vacia de la palabra mas larga hasta el momento para poder compararla luego
 
   for (let i = 0; i < avengers.length; i++) {
