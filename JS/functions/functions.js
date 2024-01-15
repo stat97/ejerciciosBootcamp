@@ -4,15 +4,10 @@ console.log("🚀Iteration#1 : Buscar el máximo");
 //Asigno valores a las variables antes de la funcion
 numberOne = Math.random(); //Con este metodo se obtiene un valor aleatorio
 numberTwo = Math.random();
-const findMax = (numberOne, numberTwo) => Math.max(numberOne,numberTwo);
+const findMax = (numberOne, numberTwo) => Math.max(numberOne, numberTwo);
 const numeroMaximo1 = findMax(numberOne, numberTwo); //Llamo a la funcion y almaceno su valor declarando la variable con el resultado
 console.log(
-  "El primer numero aleatorio es",
-  numberOne,
-  "y el segundo numero aleatorio es",
-  numberTwo,
-  "el maximo de los dos será",
-  numeroMaximo1
+  `El primer número aleatorio es ${numberOne}, el segundo número aleatorio es ${numberTwo}, y el máximo de los dos será ${numeroMaximo1}`
 );
 //?Iteración #2: Buscar la palabra más larga**
 console.log("🚀Iteration#2: Buscar la palabra más larga");
@@ -144,7 +139,7 @@ function removeDuplicates(duplicates) {
 const ArrayFinal = removeDuplicates(duplicates);
 console.log(ArrayFinal);
 //**Iteración #7: Buscador de nombres**
-console.log("🚀Iteration#7:Buscador de nombres")
+console.log("🚀Iteration#7:Buscador de nombres");
 
 //*Crea una función que reciba por parámetro un array y el valor que desea comprobar que existe dentro de dicho array - comprueba si existe el elemento, en caso que existan nos devuelve un true y la posición de dicho elemento y por la contra un false. Puedes usar este array para probar tu función:
 
@@ -162,12 +157,11 @@ const nameFinder = [
   "Marc",
 ];
 function finderName(nameFinder) {
-  const finder = nameFinder.find(el => el === "Bruce"); //metodo find ... y empleo la nomenlcatura el => el === ...para encontrar en el array
+  const finder = nameFinder.find((el) => el === "Bruce"); //metodo find ... y empleo la nomenlcatura el => el === ...para encontrar en el array
   return finder;
 }
 let comprobacion = finderName(nameFinder);
 console.log(comprobacion);
-
 
 //Importante diferencia , en la iteracion 6  includes y en la 8 hasownproperty, metodos distintos para cada caso particular.
 
@@ -207,4 +201,3 @@ function repeatCounter(counterWords) {
 
 const contadorFinal = repeatCounter(counterWords);
 console.log(contadorFinal);
-
