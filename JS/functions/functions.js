@@ -4,11 +4,11 @@ console.log("🚀Iteration#1 : Buscar el máximo");
 //Asigno valores a las variables antes de la funcion
 numberOne = Math.random(); //Con este metodo se obtiene un valor aleatorio
 numberTwo = Math.random();
-function sum(numberOne, numberTwo) {
+function findMax(numberOne, numberTwo) {
   const numeroMaximo = Math.max(numberOne, numberTwo);
   return numeroMaximo;
 }
-let numeroMaximo1 = sum(numberOne, numberTwo); //Llamo a la funcion y almaceno su valor declarando la variable con el resultado
+let numeroMaximo1 = findMax(numberOne, numberTwo); //Llamo a la funcion y almaceno su valor declarando la variable con el resultado
 console.log(
   "El primer numero aleatorio es",
   numberOne,
