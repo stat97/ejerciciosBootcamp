@@ -182,7 +182,7 @@ const counterWords = [
   "code",
 ];
 
-function repeatCounter(counterWords) {
+const repeatCounter = (counterWords) => {
   var contador = []; //creo un array vacio para el contador
   for (let i = 0; i < counterWords.length; i++) {
     const word = counterWords[i]; // la nueva constante word es igual a cada una de las iteraciones del bucle
