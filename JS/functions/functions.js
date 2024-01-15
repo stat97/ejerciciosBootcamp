@@ -123,7 +123,7 @@ const duplicates = [
   "soda",
 ];
 
-function removeDuplicates(duplicates) {
+const removeDuplicates = (duplicates) => {
   const arrayLimpio = []; //declaro un array vacio inicialmente para luego ir añadiendo
 
   for (let i = 0; i < duplicates.length; i++) {
