@@ -151,10 +151,30 @@ findArrayIndex(arrayInsectos, texto); //llamo a la funcion
 //* Como hemos dicho, que la función use el parametro para simular una tirada de dado y retornar el resultado.
 //* Si no se te ocurre como hacer un numero aleatorio no te preocupes! busca información sobre la función de javascript **Math.random();**
 function rollDice() {
-
     const resultado = Math.floor(Math.random() * 6) + 1;
     return resultado;
   }
   const resultadoLanzamiento = rollDice();
   console.log(`El dado ha caído en la cara: ${resultadoLanzamiento}`);
+
+//*Iteración #6: Función swap**
+
+//*Crea una función llamada `swap()` que reciba un array y dos parametros que sean indices del array. La función deberá intercambiar la posición de los valores de los indices que hayamos enviado como parametro. Retorna el array resultante.
+const nuevoArray =[]
+const index1 = 0
+const index2 = 1
+const arrayRandom = ['Mesirve', 'Cristiano Romualdo', 'Fernando Muralla', 'Ronalguiño']
+const swap = (arrayRandom,index1,index2)=> {
+const arrayCopy = [...arrayRandom]
+const firstElement = arrayCopy[index1]
+const secondElement = arrayCopy[index2]
+arrayCopy[index1] = secondElement;
+arrayCopy[index2] = firstElement;
+return arrayCopy
+}
+
+const resultado = swap(arrayRandom,index1,index2)
+console.log (resultado)
+
+
   
