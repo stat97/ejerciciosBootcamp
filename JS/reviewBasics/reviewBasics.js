@@ -136,11 +136,12 @@ console.log(newSounds1);
 arrayInsectos = ["Caracol", "Mosquito", "Salamandra", "Ajolote"];
 const texto = "Salamandra";
 function findArrayIndex(arrayInsectos, texto) {
-    for (let i = 0; i < arrayInsectos.length; i++) {
-        if (arrayInsectos[i] == texto) {
-            console.log(`${texto} esta en la posicion ${i}`);
+
+    arrayInsectos.forEach((element,index) => {
+        if (element == texto) {
+            console.log(`${texto} esta en la posicion ${index}`);
         }
-    }
+    });
 }
 findArrayIndex(arrayInsectos, texto); //llamo a la funcion
 
