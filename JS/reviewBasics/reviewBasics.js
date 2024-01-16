@@ -112,6 +112,24 @@ for (const clave of users) {
   }
 }
 console.log(newSounds1);
+//*Iteración #4: Métodos findArrayIndex**
+//*Crea una función llamada `findArrayIndex` que reciba como parametros un array de textos y un texto y devuelve la posición del array cuando el valor del array sea igual al valor del texto que enviaste como parametro. Haz varios ejemplos y compruebalos.
+
+arrayInsectos = ['Caracol', 'Mosquito', 'Salamandra', 'Ajolote']
+const texto = "Salamandra"
+function findArrayIndex(arrayInsectos,texto) {
+for(let i=0 ;i<arrayInsectos.length ; i++){
+    if(arrayInsectos[i] == texto){
+        console.log(`${texto} esta en la posicion ${i}`)
+        
+    }
+}
+}
+findArrayIndex(arrayInsectos,texto);
+
+
+
+
 
 
 
