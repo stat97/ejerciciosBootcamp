@@ -60,5 +60,8 @@ const pointsList = [32, 54, 21, 64, 75, 43]
 pointsListCopy = [...pointsList]
 console.log("Usando spread operator , el array copiado es",pointsListCopy)
 
-
+//*3.2 Dado el siguiente objeto, crea una copia usando spread operators.
+const toy = {name: 'Bus laiyiar', date: '20-30-1995', color: 'multicolor'};
+toyCopy ={...toy}
+console.log("Usando spread operator , el objeto copiado es",toyCopy)
 
