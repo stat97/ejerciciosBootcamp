@@ -56,19 +56,25 @@ console.log(`${namecar}, Años ITV ${year1},${year2} y ${year3}`);
 //**Iteración #3: Spread Operator**
 
 //*3.1 Dado el siguiente array, crea una copia usando spread operators.
-const pointsList = [32, 54, 21, 64, 75, 43]
-pointsListCopy = [...pointsList]
-console.log("Usando spread operator , el array copiado es",pointsListCopy)
+const pointsList = [32, 54, 21, 64, 75, 43];
+pointsListCopy = [...pointsList];
+console.log("Usando spread operator , el array copiado es", pointsListCopy);
 
 //*3.2 Dado el siguiente objeto, crea una copia usando spread operators.
-const toy = {name: 'Bus laiyiar', date: '20-30-1995', color: 'multicolor'};
-toyCopy ={...toy}
-console.log("Usando spread operator , el objeto copiado es",toyCopy)
+const toy = { name: "Bus laiyiar", date: "20-30-1995", color: "multicolor" };
+toyCopy = { ...toy };
+console.log("Usando spread operator , el objeto copiado es", toyCopy);
 
-//*3.3 Dado los siguientes arrays, crea un nuevo array juntandolos usando 
+//*3.3 Dado los siguientes arrays, crea un nuevo array juntandolos usando
 //*spread operatos.
 const pointList = [32, 54, 21, 64, 75, 43];
-const pointLits2 = [54,87,99,65,32];
-pointListTogether = [...pointList,...pointLits2] //concatenar ambos arrays
-console.log(pointListTogether)
+const pointLits2 = [54, 87, 99, 65, 32];
+pointListTogether = [...pointList, ...pointLits2]; //concatenar ambos arrays
+console.log(pointListTogether);
 
+//*3.4 Dado los siguientes objetos. Crea un nuevo objeto fusionando los dos
+//*con spread operators.
+const toys = { name: "Bus laiyiar", date: "20-30-1995", color: "multicolor" };
+const toyUpdate = { lights: "rgb", power: ["Volar like a dragon", "MoonWalk"] };
+toysTogether = {...toys,...toyUpdate}
+console.log(toysTogether)
