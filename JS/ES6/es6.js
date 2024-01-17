@@ -78,3 +78,12 @@ const toys = { name: "Bus laiyiar", date: "20-30-1995", color: "multicolor" };
 const toyUpdate = { lights: "rgb", power: ["Volar like a dragon", "MoonWalk"] };
 toysTogether = {...toys,...toyUpdate}
 console.log(toysTogether)
+
+//*3.5 Dado el siguiente array. Crear una copia de él eliminando la posición 2 
+//*pero sin editar el array inicial. De nuevo, usando spread operatos.
+const colors = ['rojo', 'azul', 'amarillo', 'verde', 'naranja'];
+const [  , , , ...colorsCopy] = colors;
+const colorsTogether = [colors[0],colors[1], ... colorsCopy] 
+console.log(colorsTogether)
+
+
