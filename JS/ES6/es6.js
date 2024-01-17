@@ -76,66 +76,71 @@ console.log(pointListTogether);
 //*con spread operators.
 const toys = { name: "Bus laiyiar", date: "20-30-1995", color: "multicolor" };
 const toyUpdate = { lights: "rgb", power: ["Volar like a dragon", "MoonWalk"] };
-toysTogether = {...toys,...toyUpdate}
-console.log(toysTogether)
+toysTogether = { ...toys, ...toyUpdate };
+console.log(toysTogether);
 
-//*3.5 Dado el siguiente array. Crear una copia de él eliminando la posición 2 
+//*3.5 Dado el siguiente array. Crear una copia de él eliminando la posición 2
 //*pero sin editar el array inicial. De nuevo, usando spread operatos.
-const colors = ['rojo', 'azul', 'amarillo', 'verde', 'naranja'];
-const [  , , , ...colorsCopy] = colors;
-const colorsTogether = [colors[0],colors[1], ... colorsCopy] 
-console.log(colorsTogether)
+const colors = ["rojo", "azul", "amarillo", "verde", "naranja"];
+const [, , , ...colorsCopy] = colors;
+const colorsTogether = [colors[0], colors[1], ...colorsCopy];
+console.log(colorsTogether);
 
 //**Iteración #4: Map**
 
-
-//*4.1 Dado el siguiente array, devuelve un array con sus nombres 
+//*4.1 Dado el siguiente array, devuelve un array con sus nombres
 //*utilizando .map().
 const users = [
-	{id: 1, name: 'Abel'},
-	{id:2, name: 'Julia'},
-	{id:3, name: 'Pedro'},
-	{id:4, name: 'Amanda'}
+  { id: 1, name: "Abel" },
+  { id: 2, name: "Julia" },
+  { id: 3, name: "Pedro" },
+  { id: 4, name: "Amanda" },
 ];
-const newUsers = [...users]
-const userNames = newUsers.map((user)=>{
-    return user.name
-})
-console.log("El array mapeado es",userNames)
+const newUsers = [...users];
+const userNames = newUsers.map((user) => {
+  return user.name;
+});
+console.log("El array mapeado es", userNames);
 
-//*4.2 Dado el siguiente array, devuelve una lista que contenga los valores 
-//*de la propiedad .name y cambia el nombre a 'Anacleto' en caso de que 
+//*4.2 Dado el siguiente array, devuelve una lista que contenga los valores
+//*de la propiedad .name y cambia el nombre a 'Anacleto' en caso de que
 //*empiece por 'A'.
 const users1 = [
-	{id: 1, name: 'Abel'},
-	{id:2, name: 'Julia'},
-	{id:3, name: 'Pedro'},
-	{id:4, name: 'Amanda'}
+  { id: 1, name: "Abel" },
+  { id: 2, name: "Julia" },
+  { id: 3, name: "Pedro" },
+  { id: 4, name: "Amanda" },
 ];
-const newUsers1 = [...users]
-const userNames1 = newUsers.map((user)=>{
-    if(user.name.startsWith("A")){
-        user.name = "Anacleto"
-    }
-    return user.name
-})
-console.log("El array mapeado es",userNames1)
-//*4.3 Dado el siguiente array, devuelve una lista que contenga los valores 
-//*de la propiedad .name y añade al valor de .name el string ' (Visitado)' 
+const newUsers1 = [...users];
+const userNames1 = newUsers.map((user) => {
+  if (user.name.startsWith("A")) {
+    user.name = "Anacleto";
+  }
+  return user.name;
+});
+console.log("El array mapeado es", userNames1);
+//*4.3 Dado el siguiente array, devuelve una lista que contenga los valores
+//*de la propiedad .name y añade al valor de .name el string ' (Visitado)'
 //*cuando el valor de la propiedad isVisited = true.
 const cities = [
-	{isVisited:true, name: 'Tokyo'}, 
-	{isVisited:false, name: 'Madagascar'},
-	{isVisited:true, name: 'Amsterdam'}, 
-	{isVisited:false, name: 'Seul'}
+  { isVisited: true, name: "Tokyo" },
+  { isVisited: false, name: "Madagascar" },
+  { isVisited: true, name: "Amsterdam" },
+  { isVisited: false, name: "Seul" },
 ];
+const citiesVisitado = cities.map((city) => {
+  //hago un mapeo del objeto cities, aplico condicion
+  if (city.isVisited == true) {
+    city.name = "Visitado";
+  }
+  return city.name;
+});
+console.log(citiesVisitado);
+//*Iteración #5: Filter**
 
+//*5.1 Dado el siguiente array, utiliza .filter() para generar un nuevo array 
+//*con los valores que sean mayor que 18
 
-const citiesVisitado = cities.map((city)=>{
-    if(city.isVisited == true){
-        city.name = "Visitado"
-    }
-    return city.name
-})
-
-console.log(citiesVisitado)
+const ages = [22, 14, 24, 55, 65, 21, 12, 13, 90];
+const newAges =ages.filter((ages) => ages > 18)
+    console.log(newAges)
