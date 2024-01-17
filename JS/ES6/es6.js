@@ -33,23 +33,32 @@ console.log(`title: ${title} , gender: ${gender}, year: ${year}`);
 const fruits = ["Banana", "Strawberry", "Orange"];
 const [fruit1, fruit2, fruit3] = fruits;
 console.log(`${fruit1}, ${fruit2} y ${fruit3}`);
-//*2.3 En base al siguiente javascript, usa destructuring para crear 2 
+//*2.3 En base al siguiente javascript, usa destructuring para crear 2
 //*variables igualandolo a la función e imprimiendolo por consola.
 
 const animalFunction = () => {
-    return {name: 'Bengal Tiger', race: 'Tiger'}
+  return { name: "Bengal Tiger", race: "Tiger" };
 };
-  const {name, race } = animalFunction();
-  let resultado = animalFunction();
-  console.log(resultado)
+const { name, race } = animalFunction();
+let resultado = animalFunction();
+console.log(resultado);
 
-//*2.4 En base al siguiente javascript, usa destructuring para crear las 
-//*variables name y itv con sus respectivos valores. Posteriormente crea 
-//*3 variables usando igualmente el destructuring para cada uno de los años 
+//*2.4 En base al siguiente javascript, usa destructuring para crear las
+//*variables name y itv con sus respectivos valores. Posteriormente crea
+//*3 variables usando igualmente el destructuring para cada uno de los años
 //*y comprueba que todo esta bien imprimiendolo.
 
-const car = {namecar: 'Mazda 6', itv: [2015, 2011, 2020] }
+const car = { namecar: "Mazda 6", itv: [2015, 2011, 2020] };
+const { namecar, itv } = car;
+const [year1, year2, year3] = itv;
+console.log(`${namecar}, Años ITV ${year1},${year2} y ${year3}`);
 
-const{namecar,itv} = car
-const [year1,year2,year3] = itv
-console.log(`${namecar}, Años ITV ${year1},${year2} y ${year3}`)
+//**Iteración #3: Spread Operator**
+
+//*3.1 Dado el siguiente array, crea una copia usando spread operators.
+const pointsList = [32, 54, 21, 64, 75, 43]
+pointsListCopy = [...pointsList]
+console.log("Usando spread operator , el array copiado es",pointsListCopy)
+
+
+
