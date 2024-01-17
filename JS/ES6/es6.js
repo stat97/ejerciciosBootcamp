@@ -65,3 +65,10 @@ const toy = {name: 'Bus laiyiar', date: '20-30-1995', color: 'multicolor'};
 toyCopy ={...toy}
 console.log("Usando spread operator , el objeto copiado es",toyCopy)
 
+//*3.3 Dado los siguientes arrays, crea un nuevo array juntandolos usando 
+//*spread operatos.
+const pointList = [32, 54, 21, 64, 75, 43];
+const pointLits2 = [54,87,99,65,32];
+pointListTogether = [...pointList,...pointLits2] //concatenar ambos arrays
+console.log(pointListTogether)
+
