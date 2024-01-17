@@ -161,3 +161,16 @@ const streamers = [
 ];
 const newStreamers = streamers.filter((streamers) => streamers.gameMorePlayed === 'League of Legends');
 console.log(newStreamers);
+
+//*5.4 Dado el siguiente array, utiliza .filter() para generar un nuevo array 
+//*con los streamers que incluyan el caracter 'u' en su propiedad .name. Recomendamos 
+//*usar la funcion .includes() para la comprobación.
+const streamers1 = [
+	{name: 'Rubius', age: 32, gameMorePlayed: 'Minecraft'},
+	{name: 'Ibai', age: 25, gameMorePlayed: 'League of Legends'},
+	{name: 'Reven', age: 43, gameMorePlayed: 'League of Legends'},
+	{name: 'AuronPlay', age: 33, gameMorePlayed: 'Among Us'}
+];
+const newStreamer1 = streamers1.filter((streamers1) => streamers1.name.includes('u'))
+console.log(newStreamer1)
+
