@@ -102,3 +102,21 @@ const userNames = newUsers.map((user)=>{
     return user.name
 })
 console.log("El array mapeado es",userNames)
+
+//*4.2 Dado el siguiente array, devuelve una lista que contenga los valores 
+//*de la propiedad .name y cambia el nombre a 'Anacleto' en caso de que 
+//*empiece por 'A'.
+const users1 = [
+	{id: 1, name: 'Abel'},
+	{id:2, name: 'Julia'},
+	{id:3, name: 'Pedro'},
+	{id:4, name: 'Amanda'}
+];
+const newUsers1 = [...users]
+const userNames1 = newUsers.map((user)=>{
+    if(user.name.startsWith("A")){
+        user.name = "Anacleto"
+    }
+    return user.name
+})
+console.log("El array mapeado es",userNames1)
