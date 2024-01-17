@@ -144,3 +144,9 @@ console.log(citiesVisitado);
 const ages = [22, 14, 24, 55, 65, 21, 12, 13, 90];
 const newAges =ages.filter((ages) => ages > 18)
     console.log(newAges)
+
+//*5.2 Dado el siguiente array, utiliza .filter() para generar un nuevo array 
+//*con los valores que sean par.
+ const ages1 = [22, 14, 24, 55, 65, 21, 12, 13, 90];
+ const parAges = ages1.filter((ages1) => ages1%2 === 0 )
+ console.log(parAges)
