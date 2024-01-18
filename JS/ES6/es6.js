@@ -174,3 +174,53 @@ const streamers1 = [
 const newStreamer1 = streamers1.filter((streamers1) => streamers1.name.includes('u'))
 console.log(newStreamer1)
 
+
+//*5.5 utiliza .filter() para generar un nuevo array con los streamers que incluyan 
+//*el caracter 'Legends' en su propiedad .gameMorePlayed. Recomendamos usar la funcion 
+//*.includes() para la comprobación.
+//*Además, pon el valor de la propiedad .gameMorePlayed a MAYUSCULAS cuando 
+//*.age sea mayor que 35.
+
+const newStreamer2 = streamers1.filter((streamers1) => streamers1.gameMorePlayed.includes('Legends'))
+console.log(newStreamer2)
+const newStreamer3 = newStreamer2.map((newStreamer2) => {
+if(newStreamer2.age > 35){
+    newStreamer2.gameMorePlayed =  newStreamer2.gameMorePlayed.toUpperCase();
+}
+return newStreamer2
+});
+console.log(newStreamer3)
+//*5.6 Dado el siguiente html y javascript, utiliza .filter() para mostrar por consola 
+//*los streamers que incluyan la palabra introducida en el input. De esta forma, si 
+//*introduzco 'Ru' me deberia de mostrar solo el streamer 'Rubius'. Si
+//*introduzco 'i', me deberia de mostrar el streamer 'Rubius' e 'Ibai'.
+const streamers3 = [
+    {name: 'Rubius', age: 32, gameMorePlayed: 'Minecraft'},
+    {name: 'Ibai', age: 25, gameMorePlayed: 'League of Legends'},
+    {name: 'Reven', age: 43, gameMorePlayed: 'League of Legends'},
+    {name: 'AuronPlay', age: 33, gameMorePlayed: 'Among Us'}
+  ];
+  
+
+
+function filterList2(streamers3) {
+  const inputValue = document.querySelector('[data-function="toFilterStreamers"]').value
+  const streamersFiltredByInput = streamers3.filter(stream => stream.name.toLowerCase().includes(inputValue.toLowerCase()))
+  console.log(streamersFiltredByInput);
+}
+
+
+
+
+
+//*
+/*myMotivationLvl = {
+    Factors = {
+        myAnxiety , if(smoking > 20 cigarretes) {contador++}
+        myEmotions=, (if overthinking > 90 % ) {contador++}
+        myCash= if(cash > 2000 )contador++
+        myThoughts=
+        myFkLife =
+    }
+}
+if(neoLand == )*/
