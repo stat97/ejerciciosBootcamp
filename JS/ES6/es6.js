@@ -209,6 +209,13 @@ function filterList2(streamers3) {
   console.log(streamersFiltredByInput);
 }
 
+//**Iteración #6: Find**
+
+
+//*6.1 Dado el siguiente array, usa .find() para econtrar el número 100.
+const numbers = [32, 21, 63, 95, 100, 67, 43];
+const newNumbers = numbers.find((numbers,index) => numbers === 100)
+console.log(newNumbers)
 
 
 
