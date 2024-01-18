@@ -218,16 +218,12 @@ const newNumbers = numbers.find((numbers,index) => numbers === 100)
 console.log(newNumbers)
 
 
+//*6.2 Dado el siguiente array, usa .find() para econtrar la pelicula del año 2010.
+const movies = [
+	{title: 'Madagascar', stars: 4.5, date: 2015},
+	{title: 'Origen', stars: 5, date: 2010},
+	{title: 'Your Name', stars: 5, date: 2016}
+];
+const findMovies = movies.find((movies,index) => movies.date === 2010)
+console.log(findMovies)
 
-
-//*
-/*myMotivationLvl = {
-    Factors = {
-        myAnxiety , if(smoking > 20 cigarretes) {contador++}
-        myEmotions=, (if overthinking > 90 % ) {contador++}
-        myCash= if(cash > 2000 )contador++
-        myThoughts=
-        myFkLife =
-    }
-}
-if(neoLand == )*/
