@@ -156,12 +156,16 @@ const nameFinder = [
   "Jessica",
   "Marc",
 ];
-const finderName = (nameFinder) => {
-  const finder = nameFinder.find((el) => el === "Bruce"); //metodo find ... y empleo la nomenlcatura el => el === ...para encontrar en el array
-  return finder;
-}
-let comprobacion = finderName(nameFinder);
-console.log(comprobacion);
+let randomName = ""
+const finderName = (nameFinder,randomName) => {
+  for(let i=0 ;i<nameFinder.length ;i++){
+   if(nameFinder[i] === randomName){
+     console.log(`${nameFinder[i]} esta en la posicion ${i}`)
+   }
+  }
+ }
+ finderName(nameFinder,"Bruce")
+ 
 
 //Importante diferencia , en la iteracion 6  includes y en la 8 hasownproperty, metodos distintos para cada caso particular.
 
