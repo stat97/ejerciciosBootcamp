@@ -285,3 +285,10 @@ if (exams2[i] >= 5){
 //*Reduce para la suma empezando de 0
 const sumExams1 = exams3.reduce((acc1,num1) =>  acc1+num1 )
 console.log(`La suma de los aprobados es de ${sumExams1}`)
+//*7.3 Dado el mismo array, haz la media de las notas de todos los examenes .reduce().
+//*Se mapea para obtener un array de scores
+
+const exams12 = exams.map((exams,index) => exams.score)
+//*Reduce para la suma empezando de 0
+const sumExams22 = exams12.reduce((acc,num) => (acc+num/exams12.length),0)
+console.log(`La media de las calificaciones es de ${sumExams22}`)
