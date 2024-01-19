@@ -268,8 +268,20 @@ const exams = [
 
 //*Se mapea para obtener un array de scores
  const exams1 = exams.map((exams,index) => exams.score)
-console.log(exams1)
 //*Reduce para la suma empezando de 0
 const sumExams = exams1.reduce((acc,num) => acc+num,0)
 
 console.log(`La suma de los scores es de ${sumExams}`)
+
+//*7.2 Dado el mismo array, haz una suma de todos las notas de los examenes de los 
+//*alumnos que esten aprobados usando la función .reduce(). 
+const exams2 = exams.map((exams,index) => exams.score)
+const exams3= []
+for(let i=0 ;i<exams2.length ; i++){
+if (exams2[i] >= 5){
+    exams3.push(exams2[i])
+}
+}
+//*Reduce para la suma empezando de 0
+const sumExams1 = exams3.reduce((acc1,num1) =>  acc1+num1 )
+console.log(`La suma de los aprobados es de ${sumExams1}`)
