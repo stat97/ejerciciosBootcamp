@@ -22,7 +22,7 @@ Es hora de enfrentarse a los ejercicios de CSS3.
 
 [Button Hover]
 
-[Centrar <div> con Flex]
+[Centrar con Flex]
 
 [Header One]
 
@@ -30,8 +30,8 @@ Es hora de enfrentarse a los ejercicios de CSS3.
 
 [Flex Layout]
 
-[Centrar <div> con Grid]
+[Centrar con Grid]
 
 [The Holy Grail Layout]
 
-[****Responsive Holy Grail Layout with Grid****]
+[Responsive Holy Grail Layout with Grid]
