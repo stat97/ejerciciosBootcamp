@@ -8,7 +8,7 @@ Dado el siguiente código de HTML, asignar los colores correspondientes según e
 
 ---
 
-![Captura de Pantalla 2022-09-12 a las 11.18.02.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1368f106-d28a-441c-9ad7-6a8e96edd87b/Captura_de_Pantalla_2022-09-12_a_las_11.18.02.png)
+![Alt text](image.png)
 
 **Autoevaluación**
 
