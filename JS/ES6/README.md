@@ -257,7 +257,7 @@ alumnos que esten aprobados usando la función .reduce().
 **Iteración #8: Bonus**
 
 ```jsx
-6.1 Dado el siguiente javascript filtra los videojuegos por gender = 'RPG' usando 
+8.1 Dado el siguiente javascript filtra los videojuegos por gender = 'RPG' usando 
 .filter() y usa .reduce() para conseguir la media de sus .score. 
 La función .find() también podría ayudarte para el contrar el genero 'RPG' en el 
 array .gender.
