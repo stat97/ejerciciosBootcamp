@@ -1,7 +1,14 @@
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("btnToClick").addEventListener("click", (e) => {
+
+    const btn = document.querySelector("#btnToClick")
+    
+    btn.addEventListener("click", (e) => {
         console.log(e);
     });
     btnToClick.focus();
-});
+
+
+    document.getElementById("input").addEventListener("click", (e) => {
+        console.log(e);
+    });
+  
 
