@@ -10,3 +10,5 @@ dotenv.config();
 
 //! conectamos con la base de datos
 connect();
+const {configCloudinary} = require("./src/middleware/files.middleware")
+configCloudinary();
