@@ -274,5 +274,30 @@ const sendCode = async (req, res, next) => {
     return next(error);
   }
 };
+const login = async (req, res, next) => {
+  try {
+		// nos traemos 
+    const { email, password } = req.body;
+    const userDB = await User.findOne({ email });
 
+    if (userDB) {
+			// comparamos la contrase del body con la del user de la DB
+      if (bcrypt.compareSync(password, userDB.password)) {
+				// si coinciden generamos el token
+        const token = generateToken(userDB._id, email);
+				// mandamos la respuesta con el token
+        return res.status(200).json({
+          user: userDB,
+          token,
+        });
+      } else {
+        return res.status(404).json('password dont match');
+      }
+    } else {
+      return res.status(404).json('User no register');
+    }
+  } catch (error) {
+    return next(error);
+  }
+};
 module.exports = { registerLargo, register, sendCode, registerWithRedirect };
