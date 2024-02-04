@@ -7,7 +7,7 @@ const User = require("../models/User.model");
 //! ---------------------------- utils ----------------------------------
 const randomCode = require("../../utils/randomCode");
 const sendEmail = require("../../utils/sendEmail");
-
+const {generateToken} = require("../../utils/token")
 //! ------------------------------librerias--------------------------------
 const nodemailer = require("nodemailer");
 const validator = require("validator");
@@ -300,4 +300,4 @@ const login = async (req, res, next) => {
     return next(error);
   }
 };
-module.exports = { registerLargo, register, sendCode, registerWithRedirect };
+module.exports = { registerLargo, register, sendCode, registerWithRedirect,login};
