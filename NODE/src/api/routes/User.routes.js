@@ -1,6 +1,8 @@
 
 const { registerLargo } = require("../controllers/User.controller");
-
+const { register } = require("../controllers/User.controller")
+const {sendCode} = require("../controllers/User.controller")
+const {registerWithRedirect} = require("../controllers/User.controller")
 //! 24 importar express
 
 const express = require("express");
