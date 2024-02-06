@@ -45,7 +45,11 @@ app.use((error, req, res) => {
     .status(error.status || 500)
     .json(error.message || "unexpected error");
 });
+const MusicRoutes = require("./src/api/routes/Music.routes");
+app.use("/api/Music/", MusicRoutes);
 
+const ConcertRoutes = require("./src/api/routes/Concert.routes");
+app.use("/api/Concerts/", ConcertRoutes)
 //! ------------------ ESCUCHAMOS EN EL PUERTO EL SERVIDOR WEB-----
 
 // esto de aqui  nos revela con que tecnologia esta hecho nuestro back
