@@ -16,6 +16,7 @@ const { configCloudinary } = require("./src/middleware/files.middleware");
 
 configCloudinary();
 
+
 //! -----------------VARIABLES CONSTANTES --> PORT
 
 const PORT = process.env.PORT;
@@ -31,7 +32,11 @@ app.use(express.urlencoded({ limit: "5mb", extended: false }));
 //! -----------------> RUTAS
 const UserRoutes = require("./src/api/routes/User.routes");
 app.use("/api/v1/users/", UserRoutes);
+const MusicRoutes = require("./src/api/routes/Music.routes");
+app.use("/api/Music/", MusicRoutes);
 
+const ConcertRoutes = require("./src/api/routes/Concert.routes");
+app.use("/api/Concerts/", ConcertRoutes)
 //! -------------------> generamos un error de cuando no see encuentre la ruta
 app.use("*", (req, res, next) => {
   const error = new Error("Route not found");
@@ -45,11 +50,7 @@ app.use((error, req, res) => {
     .status(error.status || 500)
     .json(error.message || "unexpected error");
 });
-const MusicRoutes = require("./src/api/routes/Music.routes");
-app.use("/api/Music/", MusicRoutes);
 
-const ConcertRoutes = require("./src/api/routes/Concert.routes");
-app.use("/api/Concerts/", ConcertRoutes)
 //! ------------------ ESCUCHAMOS EN EL PUERTO EL SERVIDOR WEB-----
 
 // esto de aqui  nos revela con que tecnologia esta hecho nuestro back
