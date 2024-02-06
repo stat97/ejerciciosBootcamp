@@ -5,7 +5,7 @@ const registerMusic = async (req, res, next) => {
   let catchImg = req.file?.path;
   try {
     await Music.syncIndexes();
-
+//*registrar una nueva canción en la base de datos y gestionar la imagen asociada a esa canción en Cloudinary
     const MusicExist = await Music.findOne({ name: req.body.name });
     if (!MusicExist) {
       const newMusic = new Music({ ...req.body, image: catchImg });
