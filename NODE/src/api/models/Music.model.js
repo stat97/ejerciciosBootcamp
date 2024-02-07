@@ -16,22 +16,24 @@ const MusicSchema = new mongoose.Schema(
         unique: true,
       },
       //*Duracion de la cancion
-    durationSong: {
+    timeDuration: {
       type: Number,
       required: true,
     },
     //* Genero musical
-    genreSong: {
+    genreMusic: {
       type: String,
       required: true,
       trim: true,
     },
     
-    Concert: [{ type: mongoose.Schema.Types.ObjectId, ref: "Concert" }],
     image: {
-      type: String,
-      required: true,
-    },
+        type: String,
+        required: false,
+      },
+    likes: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
+    Concert: [{ type: mongoose.Schema.Types.ObjectId, ref: "Concert" }],
+   
   },
   {
     timestamps: true,

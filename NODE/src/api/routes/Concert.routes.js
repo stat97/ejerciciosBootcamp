@@ -6,3 +6,4 @@ const ConcertRoutes = express.Router();
 ConcertRoutes.post("/register", upload.single("image"), registerConcert);
 
 module.exports = ConcertRoutes; 
+

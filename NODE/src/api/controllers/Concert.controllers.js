@@ -5,8 +5,8 @@ const registerConcert = async (req, res, next) => {
   let catchImg = req.file?.path;
   try {
     await Concert.syncIndexes();
-//*registrar una nueva sala de concierto virtual en la base de datos y gestionar la imagen asociada a esa sala en Cloudinary
-    const ConcertExist = await Concert.findOne({ name: req.body.name });
+
+    const ConcertExist = await Concert.findOne({ virtualStageName: req.body.virtualStageName });
     if (!ConcertExist) {
       const newConcert = new Concert({ ...req.body, image: catchImg });
 
@@ -33,4 +33,4 @@ const registerConcert = async (req, res, next) => {
   }
 };
 
-module.exports = { registerConcert } 
+module.exports = { registerConcert }

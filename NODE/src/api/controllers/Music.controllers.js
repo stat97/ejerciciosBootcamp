@@ -2,13 +2,15 @@ const { deleteImgCloudinary } = require("../../middleware/files.middleware");
 const Music = require("../models/Music.model");
 
 const registerMusic = async (req, res, next) => {
+    console.log(req.body)
   let catchImg = req.file?.path;
   try {
     await Music.syncIndexes();
-//*registrar una nueva canción en la base de datos y gestionar la imagen asociada a esa canción en Cloudinary
-    const MusicExist = await Music.findOne({ name: req.body.name });
+
+    const MusicExist = await Music.findOne({ nameSong: req.body.nameSong });
     if (!MusicExist) {
       const newMusic = new Music({ ...req.body, image: catchImg });
+      
 
       try {
         const MusicSave = await newMusic.save();
@@ -18,14 +20,15 @@ const registerMusic = async (req, res, next) => {
             Music: MusicSave
           });
         } else {
-          return res.status(404).json("Song not saved");
+          return res.status(404).json("Music not saved");
         }
       } catch (error) {
         return res.status(404).json(error.message);
       }
     } else {
       deleteImgCloudinary(catchImg);
-      return res.status(409).json("This song already exists");
+      
+      return res.status(409).json("this Music already exist");
     }
   } catch (error) {
     deleteImgCloudinary(catchImg);
@@ -33,4 +36,4 @@ const registerMusic = async (req, res, next) => {
   }
 };
 
-module.exports = { registerMusic } 
+module.exports = { registerMusic }
