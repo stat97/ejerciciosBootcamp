@@ -47,6 +47,10 @@ const UserSchema = new mongoose.Schema(
       type: String,
     },
     /// cuando relacionamos un modelo de con otro lo hacemos con populate y el ref a otro modelo
+    MusicFav: [{ type: mongoose.Schema.Types.ObjectId, ref: "Music" }],
+    ConcertFav: [{ type: mongoose.Schema.Types.ObjectId, ref: "Concert" }],
+    followers: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
+    followed: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
   },
   {
     timestamps: true,

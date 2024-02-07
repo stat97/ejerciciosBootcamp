@@ -36,4 +36,4 @@ const configCloudinary = () => {
   });
 };
 
-module.exports = { upload, deleteImgCloudinary, configCloudinary };
+module.exports = {upload,deleteImgCloudinary,configCloudinary };
