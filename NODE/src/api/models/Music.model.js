@@ -33,6 +33,7 @@ const MusicSchema = new mongoose.Schema(
       },
     likes: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
     concert: [{ type: mongoose.Schema.Types.ObjectId, ref: "Concert" }],
+    comments: [{ type: mongoose.Schema.Types.ObjectId, ref: "Message" }],
    
   },
   {

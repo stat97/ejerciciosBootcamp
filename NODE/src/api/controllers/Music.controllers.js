@@ -2,6 +2,7 @@ const { deleteImgCloudinary } = require("../../middleware/files.middleware");
 const Music = require("../models/Music.model");
 const User = require("../models/User.model");
 const Concert =require("../models/Concert.model");
+const enumOk = require("../../utils/enumOk.js");
 
 const registerMusic = async (req, res, next) => {
     console.log(req.body)

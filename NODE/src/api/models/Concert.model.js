@@ -33,7 +33,7 @@ const ConcertSchema = new mongoose.Schema(
       required: false,
       trim: true
     },
-    
+    comments: [{ type: mongoose.Schema.Types.ObjectId, ref: "Message" }],
     music: [{ type: mongoose.Schema.Types.ObjectId, ref: "Music" }],
     image: {
       type: String,

@@ -37,6 +37,10 @@ app.use("/api/v1/Music/", MusicRoutes);
 
 const ConcertRoutes = require("./src/api/routes/Concert.routes");
 app.use("/api/v1/Concerts/", ConcertRoutes)
+const MessageRoutes = require("./src/api/routes/Message.routes.js");
+app.use("/api/v1/message/", MessageRoutes);
+
+//!
 //! -------------------> generamos un error de cuando no see encuentre la ruta
 app.use("*", (req, res, next) => {
   const error = new Error("Route not found");

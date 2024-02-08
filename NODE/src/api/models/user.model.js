@@ -51,6 +51,13 @@ const UserSchema = new mongoose.Schema(
     ConcertFav: [{ type: mongoose.Schema.Types.ObjectId, ref: "Concert" }],
     followers: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
     followed: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
+    chats: [{ type: mongoose.Schema.Types.ObjectId, ref: "Chat" }],
+    banned: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
+    blockedByApp: { type: Boolean, default: false },
+    commentsPublicByOther: [
+      { type: mongoose.Schema.Types.ObjectId, ref: "Message" },
+    ],
+    postedMessages: [{ type: mongoose.Schema.Types.ObjectId, ref: "Message" }],
   },
   {
     timestamps: true,
