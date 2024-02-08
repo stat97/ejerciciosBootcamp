@@ -137,6 +137,177 @@ const toggleConcert = async (req, res, next) => {
     );
   }
 };
+const getById = async (req, res, next) => {
+    try {
+      const { id } = req.params;
+      const musicById = await Music.findById(id);
+      if (musicById) {
+        return res.status(200).json(musicById);
+      } else {
+        return res.status(404).json("no se ha encontrado la canción");
+      }
+    } catch (error) {
+      return res.status(404).json(error.message);
+    }
+  };
+  const getAll = async (req, res, next) => {
+    try {
+      const allMusic = await Music.find().populate("concert");
+      /** el find nos devuelve un array */
+      if (allMusic.length > 0) {
+        return res.status(200).json(allMusic);
+      } else {
+        return res.status(404).json("no se han encontrado las canciones");
+      }
+    } catch (error) {
+      return res.status(404).json({
+        error: "error al buscar - lanzado en el catch",
+        message: error.message,
+      });
+    }
+  };
+  
+  //! ---------------------------------------------------------------------
+  //? -------------------------------get by name --------------------------
+  //! ---------------------------------------------------------------------
+  const getByName = async (req, res, next) => {
+    try {
+      const {nameSong} = req.params;
+  
+      /// nos devuelve un array de elementos
+      const musicByName = await Music.find({nameSong});
+      if (musicByName.length > 0) {
+        return res.status(200).json(musicByName);
+      } else {
+        return res.status(404).json("no se ha encontrado");
+      }
+    } catch (error) {
+      return res.status(404).json({
+        error: "error al buscar por nombre capturado en el catch",
+        message: error.message,
+      });
+    }
+  };
+  
+  //! ---------------------------------------------------------------------
+  //? -------------------------------UPDATE -------------------------------
+  //! ---------------------------------------------------------------------
+  
+  const update = async (req, res, next) => {
+    await Music.syncIndexes();
+    let catchImg = req.file?.path;
+    try {
+      const { id } = req.params;
+      const musicById = await Music.findById(id);
+      if (musicById) {
+        const oldImg = musicById.image;
+  
+        const customBody = {
+          _id: musicById._id,
+          image: req.file?.path ? catchImg : oldImg,
+          nameSong: req.body?.nameSong ? req.body?.nameSong : musicById.nameSong,
+        };
+  
+        if (req.body?.gender) {
+          const resultEnum = enumOk(req.body?.gender);
+          customBody.gender = resultEnum.check
+            ? req.body?.gender
+            : characterById.gender;
+        }
+  
+        try {
+          await Music.findByIdAndUpdate(id, customBody);
+          if (req.file?.path) {
+            deleteImgCloudinary(oldImg);
+          }
+          const musicByIdUpdate = await Music.findById(id);
 
+          // ......> me cojer el req.body y vamos a sacarle las claves para saber que elementos nos ha dicho de actualizar
+          const elementUpdate = Object.keys(req.body);
+  
+          /** vamos a hacer un objeto vacion donde meteremos los test */
+  
+          let test = {};
+  
+          /** vamos a recorrer las claves del body y vamos a crear un objeto con los test */
+  
+          elementUpdate.forEach((item) => {
+            if (req.body[item] === concertByIdUpdate[item]) {
+              test[item] = true;
+            } else {
+              test[item] = false;
+            }
+          });
+  
+          if (catchImg) {
+            musicByIdUpdate.image === catchImg
+              ? (test = { ...test, file: true })
+              : (test = { ...test, file: false });
+          }
+          let acc = 0;
+          for (clave in test) {
+            test[clave] == false && acc++;
+          }
+  
+          if (acc > 0) {
+            return res.status(404).json({
+              dataTest: test,
+              update: false,
+            });
+          } else {
+            return res.status(200).json({
+              dataTest: test,
+              update: true,
+            });
+          }
+        } catch (error) {}
+      } else {
+        return res.status(404).json("esta cancion no existe");
+      }
+    } catch (error) {
+      return res.status(404).json(error);
+    }
+  };
+  const deleteMusic = async (req, res, next) => {
+    try {
+      const { id } = req.params;
+      const music = await Music.findByIdAndDelete(id);
+      if (music) {
+        // lo buscamos para vr si sigue existiendo o no
+        const finByIdMusic = await Music.findById(id);
+  
+        try {
+          const test = await Music.updateMany(
+            { musics: id },
+            { $pull: { musics: id } }
+          );
+          console.log(test);
+  
+          try {
+            await User.updateMany(
+              { musicsFav: id },
+              { $pull: { musicsFav: id } }
+            );
+  
+            return res.status(finByIdMusic ? 404 : 200).json({
+              deleteTest: finByIdMusic ? false : true,
+            });
+          } catch (error) {
+            return res.status(404).json({
+              error: "error catch update User",
+              message: error.message,
+            });
+          }
+        } catch (error) {
+          return res.status(404).json({
+            error: "error catch update Movie",
+            message: error.message,
+          });
+        }
+      }
+    } catch (error) {
+        return res.status(404).json(error.message);
+  }
+};
 
-module.exports = { registerMusic,toggleConcert }
+module.exports = { registerMusic,toggleConcert,getById,getAll,getByName,update,deleteMusic }
