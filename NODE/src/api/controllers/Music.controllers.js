@@ -1,6 +1,7 @@
 const { deleteImgCloudinary } = require("../../middleware/files.middleware");
 const Music = require("../models/Music.model");
 const User = require("../models/User.model");
+const Concert =require("../models/Concert.model");
 
 const registerMusic = async (req, res, next) => {
     console.log(req.body)
@@ -42,7 +43,7 @@ const toggleConcert = async (req, res, next) => {
   try {
     /** estee id es el id de la Musice que queremos actualizar */
     const { id } = req.params;
-    const { concerts} = req.body; // -----> idDeLosConcert enviaremos esto por el req.body "12412242253,12535222232,12523266346"
+    const { concerts} = req.body; // -----> imsomnia
     /** Buscamos la pelicula por id para saber si existe */
     const musicById = await Music.findById(id);
 
@@ -59,8 +60,8 @@ const toggleConcert = async (req, res, next) => {
        * 2) ----> meterlo en caso de que no lo tengamos metido en el back
        */
       Promise.all(
-        arrayIdConcerts.map(async (Concert, index) => {
-          if (musicById.concerts.includes(Concert)) {
+        arrayIdConcerts.map(async (concert, index) => {
+          if (musicById.concert.includes(concert)) {
             //*************************************************************************** */
 
             //________ BORRAR DEL ARRAY DE PERSONAJES EL PEERSONAJE DENTRO DE LA Music___
@@ -70,12 +71,12 @@ const toggleConcert = async (req, res, next) => {
             try {
               await Music.findByIdAndUpdate(id, {
                 // dentro de la clavee Concert me vas a sacar el id del elemento que estoy recorriendo
-                $pull: { concerts: concert },
+                $pull: { concert: concert }, // array del modelo de musica y del mapeo
               });
 
               try {
-                await Concert.findByIdAndUpdate(concert, {
-                  $pull: { musics: id },
+                await Concert.findByIdAndUpdate(concert, { //await modelo
+                  $pull: { musics: id },//hace referencia al array de concert
                 });
               } catch (error) {
                 res.status(404).json({
@@ -121,7 +122,7 @@ const toggleConcert = async (req, res, next) => {
         .catch((error) => res.status(404).json(error.message))
         .then(async () => {
           return res.status(200).json({
-            dataUpdate: await Music.findById(id).populate("Concert"),
+            dataUpdate: await Music.findById(id).populate("concert"),
           });
         });
     } else {

@@ -41,7 +41,7 @@ const toggleMusic = async (req, res, next) => {
   try {
     /** este es el id del Music que queremos actualizar */
     const { id } = req.params;
-    const { musics } = req.body; // -----> id De Los Music enviaremos esto por el req.body "12412242253,12535222232,12523266346"
+    const { Musics } = req.body; // -----> id De Los Music enviaremos esto por el req.body "12412242253,12535222232,12523266346"
     /** Buscamos los Music por id para saber si existe */
     const concertById = await Concert.findById(id); //busco en la BD si esta incluido o no
 

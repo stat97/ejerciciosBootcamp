@@ -32,7 +32,7 @@ const MusicSchema = new mongoose.Schema(
         required: false,
       },
     likes: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
-    Concert: [{ type: mongoose.Schema.Types.ObjectId, ref: "Concert" }],
+    concert: [{ type: mongoose.Schema.Types.ObjectId, ref: "Concert" }],
    
   },
   {
