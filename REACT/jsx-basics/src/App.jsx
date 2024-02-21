@@ -1,12 +1,14 @@
 import On from './components/On'
+import Title from '../../component-basics/vite-project/src/components/Header/Header'
+import Subtitle from '../../component-basics/vite-project/src/components/Header/Subtitle'
 import './App.css'
 const App = () => {
 const tiempo = (hour) => {
 
-if( hour <12){
+if(hour > 6 && hour <12){
   return <h1>Buenos dias</h1>
 
-}else if(hour<13 && hour >19){
+}else if(hour > 13 && hour < 19){
   return <h1>Buenas tardes</h1>
 
 }else{
@@ -30,6 +32,8 @@ const recorreArray = () => {
      <h1>Hola : {tiempo(12)}</h1>
    {recorreArray()}
    <On/>
+   <Title/>
+   <Subtitle/>
    </>
    )
   }
