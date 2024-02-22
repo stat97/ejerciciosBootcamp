@@ -14,20 +14,20 @@ const App = () => {
   const text3 = "soy un parrafo"
 return(
   <>
-  <Header>
+  <Header/>
     <Title title = {text}/>
     <Subtitle subtitle = {text2}/>
-  </Header>
+  
   <Main>
     <Paragraph  paragraph={text3}/>
   </Main>
-  <Footer>
+  <Footer/>
     
     <Image
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeDZ5yQYTyVQUh3KqGQmzyITc7q7v4EkPtfA&usqp=CAU"
         alt="image"
       />
-  </Footer>
+  
   </>
 )
 }
