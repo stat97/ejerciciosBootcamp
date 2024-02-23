@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -39,4 +44,47 @@
 
 .read-the-docs {
   color: #888;
+}
+/* Estilo para los elementos <li> */
+.p1 {
+  font-size: 16px; /* Tamaño de fuente */
+  color: #333; /* Color del texto */
+  /* Otros estilos que desees agregar */
+}
+
+/* Estilo alternativo para los elementos <li> */
+.p2 {
+  font-size: 14px; /* Tamaño de fuente */
+  color: #666; /* Color del texto */
+  /* Otros estilos que desees agregar */
+}
+
+/* Estilo para el título */
+.title {
+  color: white;
+  /* Otros estilos que desees agregar */
+}
+
+/* Estilo para el subtítulo */
+.subtitle {
+  font-size: 18px; /* Tamaño de fuente */
+  /* Color del texto */
+  /* Otros estilos que desees agregar */
+}
+body {
+  background-image: url("./assets/northern-lights.jpg");
+  overflow-y: hidden;
+}
+header {
+  height: 20vh;
+}
+main {
+  height: 70vh;
+}
+footer {
+  height: 10vh;
+}
+.list li:hover {
+  background-color: rgb(162, 229, 162);
+  color: green;
 }

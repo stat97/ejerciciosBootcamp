@@ -1,34 +1,39 @@
 //*import { useState } from 'react'
 
 import './App.css'
-import { CharacterList } from './components/CharacterList/CharacterList'
+import { CharacterList, Header, Paragraph } from './components'
+
+//*import { CharacterList } from './components/CharacterList/CharacterList'
 import { Footer } from './components/Footer/Footer'
-import { Header } from './components/Header/Header'
+
 import { ItemList } from './components/ItemList/ItemList'
 import { SubTitle } from './components/SubTitle/SubTitle'
 import { Title } from './components/Title/Title'
 
+
 const App = () => {
-  const text = "Este es mi titulo"
-  const text2 = "Este es mi subtitulo"
-const array = ["Nacho", "Monique" , "Natalia" , "Juliana"]
+  const text = "Welcome To My App"
+  const text2 = "Trustability & Confidence"
+  const array = ["JS", "React" , "NodeJS" , "HTML5","CSS3"]
+  const p1 = "Created By Adrian"
+  const p2 = "Copyright 2024 All Rights Reserved Powered By React"
   
   return (
     <>
-  <Header>
-	<Title title = {text}  />
+   <Header> 
+    <Title title = {text}/>
+    <SubTitle SubTitle = {text2}/>
   </Header>
   <main>
-	<SubTitle subtitle = {text2} />
-  <CharacterList/>
-	
-      <ItemList lista = {array} />
-    
-
-</main>
+    <CharacterList>
+	{array.map((item)=> (
+  <ItemList lista = {item} key = {item}/>
+  ) )}
+    </CharacterList>
+  </main>
 <Footer>
-	<p>Created by Adrian</p>
-	<p>Copyright 2024 React</p>
+	<Paragraph paragraph= {p1}/>
+  <Paragraph paragraph= {p2}/>
 </Footer>
 </>
 )

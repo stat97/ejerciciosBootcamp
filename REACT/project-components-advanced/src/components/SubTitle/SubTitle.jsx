@@ -1,3 +1,3 @@
 export const SubTitle = ({SubTitle}) => {
-    <h2>{SubTitle}</h2>
+    return <h2 className = "subtitle">{SubTitle}</h2>
 }

@@ -1,4 +1,4 @@
 export const Paragraph = ({paragraph}) => {
-<p>{paragraph}</p>
+return <p className="paragraph">{paragraph}</p>
 }
 

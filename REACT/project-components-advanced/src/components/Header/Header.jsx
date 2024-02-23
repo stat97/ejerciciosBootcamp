@@ -1,3 +1,3 @@
 export const Header = ({children}) =>{
-    <header>{children}</header>
+  return <header>{children}</header>
 }

@@ -1,3 +1,3 @@
 export const Footer = ({children}) => {
-    <footer>{children}</footer>
+   return  <footer>{children}</footer>
 }

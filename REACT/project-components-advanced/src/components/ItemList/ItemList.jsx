@@ -1,7 +1,5 @@
-export const ItemList = ({lista}) => {
+export const ItemList = ({ lista }) => {
     return (
-    <ul>{lista.map((item,index)=>
-    <li key = {index}>{item}</li>)}
-    </ul>
+        <li className ="list">{lista}</li>
     )
 }
