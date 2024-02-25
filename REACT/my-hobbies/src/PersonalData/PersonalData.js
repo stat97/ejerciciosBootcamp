@@ -77,4 +77,12 @@ export const PersonalData = {
     "randomSong7",
     "randomSong8",
   ],
+  socialmedia: [
+    {
+      linkedin:
+        "https://www.linkedin.com/in/adri%C3%A1n-ol%C3%ADas-ortiz-8b7a9b254?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+
+      github: "https://github.com/stat97",
+    },
+  ],
 };
