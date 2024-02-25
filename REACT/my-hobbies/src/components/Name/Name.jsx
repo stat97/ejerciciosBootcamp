@@ -12,12 +12,12 @@ export const Name = () => {
         
         <p>{read.place}</p>
         <p>{read.description}</p>
-        <h2>My Skills:</h2>
+        <h2>Skills</h2>
  
     </div>
-    <ul>
+    <ul className="list">
     {read.mySkills.map((mySkills, index)=>(
-        <li key={index}>{mySkills.info}</li>
+        <li  key={index}>{mySkills.info}</li>
     ))}
     </ul>
 

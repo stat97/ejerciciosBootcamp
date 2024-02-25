@@ -40,3 +40,16 @@
 .read-the-docs {
   color: #888;
 }
+body {
+  background: #474bff;
+  background: -webkit-linear-gradient(0deg, #474bff 0%, #bc48ff 100%);
+  background: linear-gradient(0deg, #474bff 0%, #bc48ff 100%);
+}
+.list li:hover {
+  background-color: rgb(
+    216,
+    159,
+    216
+  ); /* Cambia el color de fondo cuando se hace hover /
+  color:white; / Cambia el color del texto cuando se hace hover */
+}

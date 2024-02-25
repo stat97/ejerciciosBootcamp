@@ -15,8 +15,9 @@ export const App = () => {
     
     <Name/>
     <Experience/>
-    <Languages/>
     <Education/>
+    <Languages/>
+   
       
 
     </>
