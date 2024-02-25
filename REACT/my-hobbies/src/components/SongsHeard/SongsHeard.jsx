@@ -1,7 +1,7 @@
-import { Hobbies } from "../../Hobbies/Hobbies"
+import { PersonalData } from "../../PersonalData/PersonalData"
 
 export const SongsHeard = () => {
-    const {songsHeard }=Hobbies;
+    const {songsHeard }=PersonalData;
   return (
     <div>
         <h2>My songs listened</h2>
